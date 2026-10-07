@@ -1,0 +1,818 @@
+COMPREHENSIVE COMPILATION & GLOSSARY
+
+ูมือขอสอบและคําศัพท: สถาปัตยกรรมคอมพิวเตอรและฮารดแวรพื
+
+ค
+Computer Architecture, Essential Components, Internal Flow & Technical Vocabulary
+
+้นฐาน
+
+้นฐานฮารดแวรและหนาที
+
+Part 1: พื
+Fundamentals)
+
+่การทํางาน (Hardware
+
+หมวดฮารดแวร & อุปกรณประมวล
+ผล
+
+1. What is the main function of a computer?
+
+A. To cook food
+
+C. To wash clothes
+
+B. To process and store information
+
+D. To make coffee
+
+เฉลย: B. To process and store information
+
+หนาที่หลักของคอมพิวเตอรคือการประมวลผลและจัดเก็บขอมูล
+
+2. A computer can be used to type documents and
+search for information on the Internet.
+
+3. Which of the following terms refers to the
+physical components of a computer system?
+
+[✔] True
+
+เฉลย: True
+
+[ ] False
+
+A) Hardware
+
+C) Malware
+
+เฉลย: A) Hardware
+
+B) Software
+
+D) Firmware
+
+4. Which device is considered an input device (used to enter text and data into a computer)?
+
+A. Monitor (จอภาพ)
+
+C. Speaker (ลําโพง)
+
+เฉลย: B. Keyboard
+
+B. Keyboard (คียบอรด)
+
+D. Printer (เครื
+
+่องพิมพ)
+
+คียบอรดเป็น Input device สวน Monitor/Speaker/Printer จัดเป็น Output devices
+
+5. A monitor is classified as an input device
+because it displays information.
+
+6. A mouse is used to display images on a
+computer screen.
+
+[ ] True
+
+[✔] False
+
+[ ] True
+
+[✔] False
+
+เฉลย: False (จอภาพเป็น Output)
+
+เฉลย: False (ใชควบคุมชี
+
+้ตําแหนง)
+
+Part 2: สถาปัตยกรรม CPU, การประมวลผล และลําดับการทํางาน (CPU &
+Pipeline)
+
+หนวยประมวลผลก
+ลาง
+
+7. What does "CPU" stand for, and why is it often called the "brain of the computer"?
+
+A. Computer Personal Unit — It permanently stores all files and programs.
+
+B. Central Processing Unit — It processes instructions and coordinates many operations.
+
+C. Central Program Utility — It supplies electrical power to every component.
+D. Core Processing Utility — It produces all images displayed on the monitor.
+
+เฉลย: B. Central Processing Unit
+
+CPU คือสมองกลที่ทําหนาที่ประมวลผลคําสั่งและควบคุมการประสานงานของระบบ
+
+8. Which sequence BEST represents the general process when a computer runs a program?
+
+A. Storage → RAM → CPU → Output
+
+B. CPU → Storage → RAM → Input
+C. RAM → Storage → CPU → Power Supply
+
+D. GPU → CPU → Storage → RAM
+
+เฉลย: A. Storage → RAM → CPU →
+Output
+
+โปรแกรมถูกโหลดจากสื่อบันทึกขอมูล (Storage) ขึ้นสู RAM แลว CPU ดึงคําสั่งไปประมวลผล
+กอนแสดงผล
+
+📖 คลังคําศัพทสําคัญและคําแปลเฉพาะทาง (Key Vocabulary & Terminology) — สวนที
+
+่ 1
+
+Input Device: อปกรณนําเขาขอมล (เชน
+
+Output Device: อปกรณแสดงผลลัพธ (เชน Physical components: ชิ
+
+้นสวนทาง
+
+ค
+
+ูมือรวมขอสอบและคําศัพท: Computer Architecture & Fundamentals
+
+Page 1 of 5
+
+Part 3: หนวยความจํา, การจัดเก็บขอมูล และฮารดแวรเชิงลึก (Memory &
+Storage)
+
+RAM / SSD / ROM /
+GPU
+
+9. Which of the following is considered primary storage used to temporarily hold data and instructions
+currently in use?
+
+A. Hard Disk Drive (HDD)
+
+C. Flash Drive
+
+เฉลย: B. RAM
+
+B. RAM (Random Access Memory)
+
+D. ROM (Read Only Memory)
+
+RAM เป็นหนวยความจําหลักชั่วคราว ขอมูลจะสูญหายทันทีเมื่อดับเครื่อง (Volatile Memory)
+
+10. "RAM is a non-volatile memory type, meaning it
+retains stored data even when powered off."
+
+11. Which device is used to store user data
+permanently?
+
+A) True
+
+B) False
+
+เฉลย: B) False (RAM เป็น Volatile)
+
+A. RAM
+C. SSD (Solid-State Drive)
+
+B. CPU
+D. Cache
+
+เฉลย: C. SSD
+
+12. Statement: The Central Processing Unit (CPU)
+is considered the main memory of a computer.
+
+13. Cloud storage allows users to save data on
+remote servers accessed via the internet.
+
+[ ] True
+
+[✔] False
+
+A) True
+
+B) False
+
+เฉลย: False (CPU คือหนวยประมวลผล)
+
+เฉลย: A) True
+
+14. Why must we apply thermal paste between the CPU and its heatsink/cooler?
+
+A: Improves heat transfer by filling microscopic air gaps
+C: To reduce game framerates
+
+B: It makes the CPU physically cooler on its own
+D: To open tiny gaps for ventilation
+
+เฉลย: A: Improves heat transfer (ชวยประสานพื
+
+้นผิวเพื
+
+่อสงผานความรอนไปยังฮีตซิงก)
+
+15. Why is RAM capacity always an even number
+(e.g., 8GB, 16GB, 32GB) rather than odd?
+
+16. Why is it critically important to back up
+important files regularly?
+
+A: RAM uses ternary memory chips
+
+A. To make the computer screen brighter
+
+B: Computer memory is organized in powers of 6
+
+B. To prevent data loss if originals are damaged
+
+C: Memory modules use binary architecture (powers of 2)
+D: Due to overheating protection
+
+C. To make the keyboard type faster
+D. To increase physical disk drive weight
+
+เฉลย: C (สถาปัตยกรรมฐานสอง 2^n)
+
+เฉลย: B (ปองกันขอมูลสูญหายถาวร)
+
+Part 4: ระบบปฏิบัติการ และการแกปัญหา (OS & Troubleshooting)
+
+ซอฟตแวรระบบ & ลอจิก
+
+17. What is the main function of an Operating
+System (OS)?
+
+18. What does the term "troubleshooting"
+exclusively refer to?
+
+A. To create websites & blogs
+
+A. Only cleaning dust from inside the PC case
+
+B. To manage computer hardware and software resources
+C. To design vector graphics
+
+B. Diagnosing, identifying and solving problems in
+hardware/software
+
+D. To connect only to social media apps
+
+เฉลย: B. To manage resources
+
+C. Buying new components online
+
+D. Formatting every drive automatically
+
+เฉลย: B (False ในขอ T/F เดิม)
+
+📖 คลังคําศัพทสําคัญและคําแปลเฉพาะทาง (Key Vocabulary & Terminology) — สวนที
+
+่ 2
+
+Temporarily hold: พักหรือเก็บขอมูลไว
+ชั
+Thermal paste: ซิลิโคนนําความรอนระบาย Microscopic gaps: ชองวางขนาดเล็กระดับ Troubleshooting: การตรวจวิเคราะหและ
+
+Non-volatile: หนวยความจําถาวรที
+เลือน
+
+Volatile memory: หนวยความจําที
+ไดเมื
+
+่เลือนหาย
+
+่อไฟดับ
+
+่วคราว
+
+่ไมลบ
+
+ค
+
+ูมือรวมขอสอบและคําศัพท: Memory, Storage & Operating Systems
+
+Page 2 of 5
+
+Part 5: เครือขายคอมพิวเตอรและโทโพโลยี (Network Topologies &
+Protocols)
+
+่อมตอ &
+
+การเชื
+โปรโตคอล
+
+19. Which network topology does this statement
+describe: "If the central server/switch fails, the
+whole network will fail"?
+
+a) Bus topology
+c) Star topology
+
+b) Ring topology
+d) Mesh topology
+
+เฉลย: c) Star topology (แบบดาว)
+
+20. In a Ring Topology, removing or disconnecting
+a single computer will not affect the others.
+
+[ ] True
+
+[✔] False
+
+เฉลย: False (สายวงแหวนขาดจะลมทั
+
+้งวง)
+
+21. What is an IP address used for?
+
+A. To measure broadband connection speed
+B. To uniquely identify a device on a network
+
+C. To encrypt files in folders
+
+D. To format storage partitions
+
+เฉลย: B (ระบุตัวตนประจําอุปกรณในเครือขาย)
+
+23. What does the letter "S" stand for in "HTTPS"?
+
+A. System
+C. Secure
+
+B. Speed
+D. Server
+
+เฉลย: C. Secure (มีการเขารหัส SSL/TLS)
+
+22. Which device connects multiple computers
+together in a local network (LAN)?
+
+A. Monitor
+
+B. Network Switch
+
+C. Keyboard
+D. Thermal Printer
+
+เฉลย: B. Switch (สวิตชเครือขาย)
+
+24. What is the main function of a Network
+Firewall?
+
+A. To increase monitor
+resolution
+
+C. To speed up internet
+download speed
+
+B. To monitor and filter
+network traffic
+
+D. To clean dust from
+hardware cases
+
+เฉลย: B (ดักกรองและปองกันการเขาถึงที
+
+่ไมไดรับอนุญาต)
+
+Part 6: ความมั
+
+่นคงปลอดภัยไซเบอรและมัลแวร (Cybersecurity & Threats)
+
+มัลแวร & ภัยคุกคาม
+
+25. Which software is designed intentionally to
+cause damage to a computer or server?
+
+26. Which malware encrypts a user's files and
+demands ransom payment to restore access?
+
+A) Hardware
+
+C) Firmware
+
+B) Malware
+
+D) Middleware
+
+A. Spyware
+
+C. Adware
+
+B. Ransomware
+
+D. Worm
+
+เฉลย: B) Malware (Malicious Software)
+
+เฉลย: B. Ransomware (มัลแวรเรียกคาไถ)
+
+27. Which of the following best describes
+phishing?
+
+A) Installing antivirus software
+B) Sending fake emails/links to steal sensitive personal
+information
+
+C) Encrypting files for protection
+
+D) Updating firmware drivers
+
+เฉลย: B (การหลอกลวงตกเบ็ดขโมยขอมูล)
+
+28. What is the primary purpose of Spyware?
+
+A) To protect the computer from trojans
+
+B) To secretly monitor and log user activities
+
+C) To optimize CPU thermal cooling
+D) To clean temporary browser caches
+
+เฉลย: B (แอบติดตามบันทึกพฤติกรรมผ
+
+ูใช)
+
+📖 คลังคําศัพทสําคัญและคําแปลเฉพาะทาง (Key Vocabulary & Terminology) — สวนที
+
+่ 3
+
+Topology: โครงสรางและรูปแบบการเชื
+ตอเครือขาย
+Ransomware: โปรแกรมเรียกคาไถโดย
+การเขารหัสไฟล
+
+่อม
+
+้ากัน
+
+Uniquely identify: ระบุเอกลักษณเฉพาะตัว
+ไมใหซํ
+Phishing: กลลวงหลอกขอรหัสผานหรือ
+ขอมูลการเงิน
+
+Filter traffic: คัดกรองขอมูลเขา-ออกจาก
+โครงขาย
+Identity theft: การโจรกรรมสวมรอยขอมูล
+สวนบุคคล
+
+ค
+
+ูมือรวมขอสอบและคําศัพท: Network Topologies & Cyber Threats
+
+Page 3 of 5
+
+Part 7: หลักการตั
+Defense)
+
+้งรหัสผานและการปองกันบัญชี (Password Rules &
+
+การรักษาความปลอดภัย
+บัญชี
+
+29. Which of the following is NOT a good password
+rule?
+
+30. Which password meets all security guidelines
+and is the strongest?
+
+A. Use at least 6–8 characters.
+
+B. Use a mixture of numbers and symbols.
+C. Use a common dictionary word or personal name.
+
+A) Biscuit / 123456
+
+B) Tom3 / myname
+C) John / password
+
+D. Use both capital and lowercase letters.
+
+D) Eztv3xq / P@ssw0rd!2024 / T!g3r#99
+
+เฉลย: C (หามใชชื
+
+่อคนทั
+
+่วไปหรือคําในดิกชันนารี)
+
+เฉลย: D (มีความยาว ผสมตัวเลข ตัวพิมพใหญ-เล็ก
+สัญลักษณ)
+
+31. What is the best way to protect an online
+account?
+
+32. If an email/SMS asks for your password or
+credit card info, what should you do?
+
+A. Use simple passwords easy to memorize
+
+A. Click immediately to update info
+
+B. Share password with your trusted classmate
+
+B. Reply with bank credentials
+
+C. Use strong password + 2-Factor Authentication (2FA)
+D. Use the exact same password on all websites
+
+C. Delete, ignore and report as suspicious
+D. Forward to social media followers
+
+เฉลย: C (ใชรหัสผานรัดกุมรวมกับการยืนยันตัวตนสองขั
+ตอน)
+
+้น
+
+เฉลย: C (ลบทิ
+
+้ง ไมคลิกลิงกเด็ดขาด)
+
+Part 8: ซอฟตแวรประยุกต ไฟล และการเขียนโปรแกรมเว็บ (Software, Files &
+Web)
+
+ซอฟตแวร & เว็บ
+เทคโนโลยี
+
+33. Which file extension is commonly used for a
+Microsoft Word document?
+
+34. Which application is used to create slide
+presentations?
+
+A. .jpg
+C. .docx
+
+B. .mp3
+D. .exe
+
+A. MS PowerPoint
+C. Notepad
+
+B. Calculator
+D. File Explorer
+
+เฉลย: C. .docx (ไฟลเอกสาร Word)
+
+เฉลย: A. Microsoft PowerPoint
+
+35. "Microsoft Excel is mainly used for creating
+slide presentations."
+
+36. What key combination is used to undo the last
+action in most applications?
+
+[ ] True
+
+เฉลย: False
+
+[✔] False (ใชทําสเปรดชีต
+คํานวณตาราง)
+
+A) Ctrl + C
+
+C) Ctrl + Z
+
+B) Ctrl + V
+
+D) Ctrl + S
+
+เฉลย: C) Ctrl + Z (เลิกทํา/ยอนกลับ)
+
+37. What is the main purpose of HTML in web
+development?
+
+38. Which language is mainly used to make a web
+page interactive?
+
+A. To store database records securely
+
+B. To structure the content of a web page
+C. To protect machines from spyware
+
+D. To run complex math calculations
+
+เฉลย: B (กําหนดโครงสรางเนื
+
+้อหาของหนาเว็บ)
+
+A. HTML
+
+C. JavaScript
+
+B. CSS
+
+D. SQL
+
+เฉลย: C. JavaScript (ตอบสนองผ
+
+ูใช)
+
+📖 คลังคําศัพทสําคัญและคําแปลเฉพาะทาง (Key Vocabulary & Terminology) — สวนที
+
+่ 4
+
+้นตอน (2FA)
+
+Two-factor auth: การตรวจสอบสิทธิ
+ขั
+File extension: นามสกุลระบุประเภทชนิด
+ของไฟล
+
+์แบบ 2
+
+Suspicious: นาสงสัย / มีพิรุธอาจเป็น
+อันตราย
+Infringement: การละเมิดสิทธิ
+ลิขสิทธิ
+
+์ซอฟตแวร)
+
+์ (เชน
+
+Interactive: สามารถโตตอบ ปฏิสัมพันธกับผ
+ใชได
+Undo action: การยกเลิกคําสั
+ทําลาสด
+
+่งหรือการกระ
+
+ค
+
+ูมือรวมขอสอบและคําศัพท: Password Safety & Web Technologies
+
+Page 4 of 5
+
+ู
+Part 9: ปัญญาประดิษฐและถอดรหัสลับ (AI, Deep Learning &
+Cryptography)
+
+AI, โครงขายประสาทเทียม & รหัส
+ลับ
+
+39. What is Deep Learning?
+
+A. A physical type of cooling hardware
+
+B. A machine learning method using neural networks with
+many layers
+
+C. A web database programming script
+D. An internet browsing protocol
+
+เฉลย: B (การเรียนร
+
+ูเชิงลึกดวยโครงขายประสาทหลายชั
+
+้น)
+
+40. What is the basic building block of a neural
+network?
+
+A. Neuron (โหนดเซลล
+ประสาท)
+C. Database Table
+
+เฉลย: A. Neuron
+
+B. Folder
+
+D. Browser cache
+
+41. Which layer receives the initial data in an
+artificial neural network?
+
+42. In Caesar Cipher with +1 shift (A→B, B→C),
+decode the ciphertext: "IFMMP"
+
+A. Output layer
+
+C. Input layer
+
+B. Hidden layer
+
+D. Final loss layer
+
+เฉลย: C. Input layer (ชั
+
+้นขอมูลขาเขา)
+
+A. HELLO (ถอย 1 ตัว: I→H,
+F→E, M→L, M→L, P→O)
+
+B. HOUSE
+
+C. HAPPY
+
+D. HUMAN
+
+เฉลย: A. HELLO
+
+Part 10: ไวยากรณภาษาอังกฤษและสํานวนในวงการไอที (Grammar & IT
+Expressions)
+
+ไวยากรณ & สํานวน
+่อสาร
+สื
+
+43. Which sentence correctly uses the Past Simple
+Passive Voice?
+
+44. "The system administrator ___ the server
+software yesterday."
+
+A. GPS is developed in the 1970s.
+
+B. GPS was developed in the 1970s as a navigation
+system.
+
+C. GPS is developing in the 1970s.
+
+D. GPS has develop in the 1970s.
+
+เฉลย: B. GPS was developed in the 1970s...
+
+A) update
+
+C) updated (Past Simple
+สอดคลองกับ yesterday)
+
+เฉลย: C) updated
+
+B) updates
+
+D) is updating
+
+45. "His blog post went viral." ประโยคนี
+ตรงกับขอใดมากที
+
+่สุด?
+
+้มีความหมาย
+
+a) It made people's computers crash.
+b) It became popular and spread very quickly.
+
+c) It was deleted from the server permanently.
+
+d) It was written decades ago.
+
+เฉลย: b) It became popular very quickly
+
+46. Which sentence is the correct instruction for a
+teacher to use?
+
+A. "Please to save your work before shut down..."
+B. "Please save your work before shutting down the
+computer."
+
+C. "Please saving your work before shutdown..."
+
+D. "Please saved your work..."
+
+เฉลย: B (Please + V.infinitive + prep + V.ing)
+
+Part 11: คําถามไวยากรณพื
+
+้นฐานเพิ
+
+่มเติม (General English Foundations)
+
+คําตรงขาม & Tense
+
+47. She ___ to school every day. / What time ___
+you usually wake up?
+
+48. What is the opposite (คําตรงขาม) of
+"expensive"?
+
+A. go / does
+
+B. goes / do (Present
+Simple)
+
+C. going / are
+
+D. gone / is
+
+เฉลย: goes / do
+
+A. Cheap (ราคาถูก)
+
+C. Difficult
+
+เฉลย: A. Cheap
+
+B. Large
+
+D. Beautiful
+
+ค
+
+ูมือรวมขอสอบและคําศัพท: AI, Cryptography & English Expressions
+
+Page 5 of 5
+
+

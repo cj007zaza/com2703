@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="description" content="เว็บสรุปเนื้อหา แฟลชการ์ด และคลังข้อสอบ Final 90 ข้อ บทที่ 5-8 วิชาเครือข่ายคอมพิวเตอร์ (COM2703)">
+    <title>COM2703 เครือข่ายคอมพิวเตอร์ - สรุปเนื้อหา แฟลชการ์ด & ข้อสอบ Final 90 ข้อ</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-dark">
+    <!-- Main App Wrapper -->
+    <div class="app-layout">
+        <!-- Top Navigation Bar -->
+        <header class="app-topbar">
+            <div class="brand-container">
+                <span class="brand-icon">🌐</span>
+                <div class="brand-info">
+                    <h1>COM2703 เครือข่ายคอมพิวเตอร์</h1>
+                    <span class="brand-subtitle">Final Review บทที่ 5 - 8 (สรุป • แฟลชการ์ด • ข้อสอบ 90 ข้อ)</span>
+                </div>
+            </div>
+            <div class="topbar-actions">
+                <a href="quiz_app/index.html" class="btn-midterm-link" target="_blank" title="เปิดข้อสอบทบทวน Midterm 100 ข้อ">
+                    <span>📖 ทบทวน Midterm</span>
+                </a>
+                <button id="themeToggleBtn" class="btn-icon" title="สลับโหมดมืด/สว่าง">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="main-tabs-nav">
+            <button class="nav-tab active" data-tab="tab-summary">
+                <span class="tab-emoji">📚</span>
+                <span class="tab-text">สรุปเนื้อหาบทเรียน</span>
+            </button>
+            <button class="nav-tab" data-tab="tab-flashcards">
+                <span class="tab-emoji">🗂️</span>
+                <span class="tab-text">แฟลชการ์ดคำศัพท์</span>
+                <span class="tab-badge" id="fcCountBadge">65</span>
+            </button>
+            <button class="nav-tab" data-tab="tab-quiz">
+                <span class="tab-emoji">✍️</span>
+                <span class="tab-text">คลังข้อสอบ Final (90 ข้อ)</span>
+                <span class="tab-badge hot" id="quizCountBadge">90</span>
+            </button>
+            <button class="nav-tab" data-tab="tab-calculator">
+                <span class="tab-emoji">🧮</span>
+                <span class="tab-text">เครื่องคิดเลข Subnet</span>
+            </button>
+        </nav>
+
+        <!-- Content Area -->
+        <div class="app-content-area">
+            
+            <!-- ========================================== -->
+            <!-- TAB 1: สรุปเนื้อหาบทเรียน (ILLUSTRATED SUMMARY) -->
+            <!-- ========================================== -->
+            <section id="tab-summary" class="tab-pane active">
+                <div class="summary-control-bar">
+                    <div class="chapter-chips-scroll">
+                        <button class="chapter-chip active" data-chapter="ch5">บทที่ 5: โพรโทคอล & OSI</button>
+                        <button class="chapter-chip" data-chapter="ch6">บทที่ 6: สถาปัตยกรรม & Routing</button>
+                        <button class="chapter-chip" data-chapter="ch7">บทที่ 7: LAN & Topologies</button>
+                        <button class="chapter-chip" data-chapter="ch8">บทที่ 8: WAN & Subnetting</button>
+                    </div>
+                </div>
+
+                <div class="summary-body" id="summaryDynamicContent">
+                    <!-- Loaded dynamically from data/summary.js -->
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- TAB 2: แฟลชการ์ดคำศัพท์ (FLASHCARDS) -->
+            <!-- ========================================== -->
+            <section id="tab-flashcards" class="tab-pane">
+                <div class="fc-control-card">
+                    <div class="fc-filter-group">
+                        <label for="fcChapterFilter">เลือกบท:</label>
+                        <select id="fcChapterFilter" class="custom-select">
+                            <option value="all">🌟 ทุกบทเรียน (บทที่ 5-8)</option>
+                            <option value="บทที่ 5">บทที่ 5: โพรโทคอล & OSI Model</option>
+                            <option value="บทที่ 6">บทที่ 6: ระบบเครือข่าย & Routing</option>
+                            <option value="บทที่ 7">บทที่ 7: LAN & Topology</option>
+                            <option value="บทที่ 8">บทที่ 8: Subnetting & IP Addressing</option>
+                        </select>
+                    </div>
+                    <div class="fc-stats-group">
+                        <span class="fc-stat-item">
+                            การ์ดที่: <strong id="fcCurrentIndex">1</strong> / <span id="fcTotalCount">65</span>
+                        </span>
+                        <span class="fc-stat-item success">
+                            จำได้แล้ว: <strong id="fcMasteredCount">0</strong>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Flashcard Stage -->
+                <div class="fc-stage-wrapper">
+                    <div class="flashcard-3d" id="flashcardElement" title="แตะหรือคลิกเพื่อพลิกการ์ด">
+                        <div class="fc-flipper">
+                            <!-- Front of Card -->
+                            <div class="fc-face fc-front">
+                                <div class="fc-badge-tag" id="fcFrontBadge">บทที่ 5</div>
+                                <div class="fc-front-body">
+                                    <h2 class="fc-term" id="fcFrontTerm">ARP (Address Resolution Protocol)</h2>
+                                    <p class="fc-tap-hint">👆 แตะหรือกด Spacebar เพื่อดูความหมาย</p>
+                                </div>
+                                <div class="fc-footer-hint">OSI Layer 2</div>
+                            </div>
+                            <!-- Back of Card -->
+                            <div class="fc-face fc-back">
+                                <div class="fc-badge-tag" id="fcBackBadge">ความหมาย & จุดจำสอบ</div>
+                                <div class="fc-back-body">
+                                    <p class="fc-definition" id="fcBackDef">
+                                        แปลงหมายเลขลอจิคัล (IP Address) เป็นหมายเลขฟิสิคัล (MAC Address)
+                                    </p>
+                                    <div class="fc-mnemonic-box">
+                                        <span class="m-label">💡 สูตรจำ:</span>
+                                        <span class="m-text" id="fcBackMnemonic">แปลง IP -> MAC Address</span>
+                                    </div>
+                                </div>
+                                <p class="fc-tap-hint">👆 แตะเพื่อพลิกกลับ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flashcard Controls -->
+                <div class="fc-actions-toolbar">
+                    <button id="fcPrevBtn" class="btn btn-secondary" title="การ์ดก่อนหน้า (ลูกศรซ้าย)">⬅️ ก่อนหน้า</button>
+                    <button id="fcShuffleBtn" class="btn btn-outline" title="สุ่มลำดับคำศัพท์">🔀 สุ่มคำศัพท์</button>
+                    <button id="fcMarkBtn" class="btn btn-success" title="ทำเครื่องหมายว่าจำได้แล้ว">✅ จำได้แล้ว</button>
+                    <button id="fcNextBtn" class="btn btn-primary" title="การ์ดถัดไป (ลูกศรขวา)">ถัดไป ➡️</button>
+                </div>
+                <p class="fc-keyboard-tip">⌨️ คีย์ลัด: แป้นลูกศร [← / →] เลื่อนการ์ด | [Spacebar] พลิกการ์ด</p>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- TAB 3: คลังข้อสอบ FINAL 90 ข้อ (QUIZ ENGINE) -->
+            <!-- ========================================== -->
+            <section id="tab-quiz" class="tab-pane">
+                <!-- Mode & Filter Toolbar -->
+                <div class="quiz-toolbar-card">
+                    <div class="mode-selector">
+                        <button id="modePracticeBtn" class="btn-mode active">
+                            <span class="mode-icon">💡</span> Practice Mode (ฝึกทำ+ดูเฉลย)
+                        </button>
+                        <button id="modeExamBtn" class="btn-mode">
+                            <span class="mode-icon">⏱️</span> Exam Mode (จำลองสอบ 90 นาที)
+                        </button>
+                    </div>
+
+                    <div class="filter-and-drawer">
+                        <div class="filter-group">
+                            <label for="quizChapterFilter">เลือกบท:</label>
+                            <select id="quizChapterFilter" class="custom-select">
+                                <option value="all">📝 ครบทุกบท (90 ข้อ)</option>
+                                <option value="บทที่ 5">บทที่ 5: โพรโทคอล & OSI Model</option>
+                                <option value="บทที่ 6">บทที่ 6: ระบบเครือข่าย & Routing</option>
+                                <option value="บทที่ 7">บทที่ 7: LAN & Topology</option>
+                                <option value="บทที่ 8">บทที่ 8: Subnetting & IP Addressing</option>
+                            </select>
+                        </div>
+                        <button id="openGridBtn" class="btn btn-outline" title="ดูผังข้อสอบทั้งหมด">
+                            🗺️ แผนผังข้อสอบ (<span id="answeredCounter">0</span>/90)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Progress Header -->
+                <div class="quiz-progress-bar-card">
+                    <div class="qp-info">
+                        <span class="qp-counter" id="quizCounterText">ข้อที่ 1 / 90</span>
+                        <span class="badge" id="quizChapBadge">บทที่ 5</span>
+                        <span class="timer-badge hidden" id="quizTimerDisplay">⏱️ 90:00</span>
+                    </div>
+                    <div class="qp-track">
+                        <div class="qp-fill" id="quizProgressFill" style="width: 1%;"></div>
+                    </div>
+                </div>
+
+                <!-- Question Card -->
+                <main class="question-main-card">
+                    <div class="q-header">
+                        <span class="q-num-label" id="qNumBadge">Q1</span>
+                        <h2 class="q-text" id="questionText">กำลังโหลดข้อสอบ...</h2>
+                    </div>
+
+                    <!-- Options Container -->
+                    <div class="options-list" id="optionsContainer">
+                        <!-- Rendered by JS -->
+                    </div>
+
+                    <!-- Explanation Box (Practice Mode) -->
+                    <div class="explanation-card hidden" id="explanationCard">
+                        <div class="exp-header">
+                            <span class="exp-badge" id="expResultBadge">ถูกต้อง!</span>
+                            <span class="exp-title">💡 เฉลยและคำอธิบายโดยละเอียด</span>
+                        </div>
+                        <p class="exp-body" id="explanationText"></p>
+                    </div>
+
+                    <!-- Bottom Nav -->
+                    <div class="quiz-nav-row">
+                        <button id="quizPrevBtn" class="btn btn-secondary" disabled>⬅️ ก่อนหน้า</button>
+                        <button id="quizFlagBtn" class="btn btn-outline">🔖 ปักหมุดทบทวน</button>
+                        <button id="quizNextBtn" class="btn btn-primary">ถัดไป ➡️</button>
+                        <button id="quizSubmitBtn" class="btn btn-success hidden">📝 ส่งกระดาษคำตอบ</button>
+                    </div>
+                </main>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- TAB 4: เครื่องคิดเลข SUB NET (SUBNET CALCULATOR) -->
+            <!-- ========================================== -->
+            <section id="tab-calculator" class="tab-pane">
+                <div class="calc-grid-layout">
+                    <!-- Calculator Tool -->
+                    <div class="calc-tool-card">
+                        <div class="card-head">
+                            <h3>🧮 เครื่องมือคำนวณ IPv4 Subnet Calculator</h3>
+                            <p>กรอก IP Address และเลือก Prefix CIDR เพื่อวิเคราะห์หา Subnet Mask, Network Address, Broadcast Address และจำนวน Host</p>
+                        </div>
+
+                        <div class="calc-form">
+                            <div class="form-group">
+                                <label for="calcIpInput">IPv4 Address:</label>
+                                <input type="text" id="calcIpInput" class="custom-input" placeholder="เช่น 192.168.100.25 หรือ 10.1.113.75" value="192.168.100.25">
+                            </div>
+                            <div class="form-group">
+                                <label for="calcPrefixSelect">Subnet Mask / CIDR Prefix:</label>
+                                <select id="calcPrefixSelect" class="custom-select">
+                                    <!-- Options generated by JS -->
+                                </select>
+                            </div>
+                            <button id="calcComputeBtn" class="btn btn-primary btn-block">🚀 คำนวณซับเน็ตทันที</button>
+                        </div>
+
+                        <!-- Result Display -->
+                        <div class="calc-result-box" id="calcResultBox">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Quick Reference Table -->
+                    <div class="calc-ref-card">
+                        <div class="card-head">
+                            <h3>📖 ตารางค่าน้ำหนัก 2 ยกกำลัง & Subnet Quick Ref</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="styled-table mini-table">
+                                <thead>
+                                    <tr>
+                                        <th>กำลัง</th>
+                                        <th>ผลลัพธ์</th>
+                                        <th>CIDR</th>
+                                        <th>Subnet Mask (Octet 4)</th>
+                                        <th>Usable Hosts</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>2<sup>0</sup></td><td>1</td><td>/32</td><td>255.255.255.255</td><td>1 host</td></tr>
+                                    <tr><td>2<sup>1</sup></td><td>2</td><td>/31</td><td>255.255.255.254</td><td>2 (PtP)</td></tr>
+                                    <tr><td>2<sup>2</sup></td><td>4</td><td>/30</td><td>255.255.255.252</td><td>2 hosts</td></tr>
+                                    <tr><td>2<sup>3</sup></td><td>8</td><td>/29</td><td>255.255.255.248</td><td>6 hosts</td></tr>
+                                    <tr><td>2<sup>4</sup></td><td>16</td><td>/28</td><td>255.255.255.240</td><td>14 hosts</td></tr>
+                                    <tr><td>2<sup>5</sup></td><td>32</td><td>/27</td><td>255.255.255.224</td><td>30 hosts</td></tr>
+                                    <tr><td>2<sup>6</sup></td><td>64</td><td>/26</td><td>255.255.255.192</td><td>62 hosts</td></tr>
+                                    <tr><td>2<sup>7</sup></td><td>128</td><td>/25</td><td>255.255.255.128</td><td>126 hosts</td></tr>
+                                    <tr><td>2<sup>8</sup></td><td>256</td><td>/24</td><td>255.255.255.0</td><td>254 hosts</td></tr>
+                                    <tr><td>2<sup>9</sup></td><td>512</td><td>/23</td><td>255.255.254.0</td><td>510 hosts</td></tr>
+                                    <tr><td>2<sup>10</sup></td><td>1,024</td><td>/22</td><td>255.255.252.0</td><td>1,022 hosts</td></tr>
+                                    <tr><td>2<sup>11</sup></td><td>2,048</td><td>/21</td><td>255.255.248.0</td><td>2,046 hosts</td></tr>
+                                    <tr><td>2<sup>12</sup></td><td>4,096</td><td>/20</td><td>255.255.240.0</td><td>4,094 hosts</td></tr>
+                                    <tr><td>2<sup>13</sup></td><td>8,192</td><td>/19</td><td>255.255.224.0</td><td>8,190 hosts</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Drawer: Question Grid Modal -->
+    <div id="gridDrawerModal" class="modal-overlay hidden">
+        <div class="modal-drawer">
+            <div class="drawer-header">
+                <h3>🗺️ แผนผังข้อสอบ (90 ข้อ)</h3>
+                <button id="closeDrawerBtn" class="btn-icon">&times;</button>
+            </div>
+            <div class="drawer-legend">
+                <span class="legend-item"><span class="dot done"></span> ตอบแล้ว</span>
+                <span class="legend-item"><span class="dot flag"></span> ปักหมุด</span>
+                <span class="legend-item"><span class="dot pending"></span> ยังไม่ตอบ</span>
+            </div>
+            <div class="drawer-grid-container" id="drawerGridContainer">
+                <!-- Buttons 1-90 dynamically generated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Exam Result Modal -->
+    <div id="examResultModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h2>🎉 สรุปผลการสอบ Final COM2703</h2>
+            <div class="score-circle-wrapper">
+                <div class="score-number" id="resultScoreText">0 / 90</div>
+                <div class="score-pct" id="resultPercentText">0%</div>
+            </div>
+            <p class="score-feedback" id="resultFeedbackText">กำลังประมวลผล...</p>
+
+            <div class="result-stats-row">
+                <div class="r-stat-box green">
+                    <span class="r-val" id="resStatCorrect">0</span>
+                    <span class="r-lbl">ตอบถูก</span>
+                </div>
+                <div class="r-stat-box red">
+                    <span class="r-val" id="resStatWrong">0</span>
+                    <span class="r-lbl">ตอบผิด</span>
+                </div>
+                <div class="r-stat-box gray">
+                    <span class="r-val" id="resStatSkipped">0</span>
+                    <span class="r-lbl">ไม่ได้ทำ</span>
+                </div>
+            </div>
+
+            <!-- Chapter breakdown -->
+            <div class="chap-breakdown-box" id="chapBreakdownBox">
+                <!-- Rendered by JS -->
+            </div>
+
+            <div class="modal-actions-row">
+                <button id="resultReviewBtn" class="btn btn-secondary">🔍 ตรวจดูเฉลยละเอียด</button>
+                <button id="resultRetakeBtn" class="btn btn-primary">🔄 ทำใหม่อีกครั้ง</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Scripts -->
+    <script src="data/summary.js"></script>
+    <script src="data/flashcards.js"></script>
+    <script src="data/questions90.js"></script>
+    <!-- Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>

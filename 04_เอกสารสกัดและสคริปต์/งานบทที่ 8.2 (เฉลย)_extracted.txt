@@ -1,0 +1,2300 @@
+Chapter 8 : ระบบเครือข่ายวงกว้าง (Continue) 
+
+การจ ัดสรรไอพีแบบไม่ใช้คลาส (Classless) 
+1. CIDR Default Subnet Mask 
+Class 
+
+Subnet Mask (Binary) 
+
+Subnet Mask 
+Dotted-Decimal 
+
+A 
+
+B 
+
+C 
+
+11111111  00000000  00000000  00000000  255.0.0.0 
+
+11111111  11111111  00000000  00000000 
+
+255.255.0.0 
+
+11111111  11111111  11111111  00000000 
+
+255.255.255.0 
+
+2. CIDR Custom Subnet Mask 
+
+/30 หมายถึง mask 30 bits แรก ด ้วยเลข 1 
+Subnet mask (SNM) = 11111111.11111111.11111111.111111/00 
+
+                                          255       .    255     .    255    .  252 
+
+CIDR 
+
+/8 
+
+/16 
+
+/24 
+
+3. การหาจํานวน Subnet และจํานวน Host จากค่า Subnet Mask  
+
+่ใช ้ได ้ = 2N -2   
+
+3.1 จํานวน Subnet = 2N   
+3.2 จํานวน Subnet ที
+3.3 จํานวน Host =  2H    
+3.4 จํานวน Host ที
+- N คือ bits ที
+- H คือ bits ที
+- ส่วนเลข 2 ที
+Broadcast IP (IP Address สุดท ้าย) 
+
+่ใช ้ได ้ = 2H -2  
+
+่หน ้าตัว Mask ถึงตําแหน่ง . (dot) ที
+่หลังตัว Mask 
+
+่อยู
+่อยู
+่ลบออกไปคือ Network IP (IP Address ค่าแรก) และ 
+
+่ใกล ้ที
+
+่สุด 
+
+ต ัวอย่าง  /30 
+11111111.11111111.11111111.111111/00 
+Subnet  Mask คือ  255.255.255.252 
+จํานวน Subnet = 2N = 26 = 64 
+จํานวน Subnet ที
+จํานวน host = 2H = 22 = 4 
+จํานวน hosts/Subnet ที
+
+่ใช ้ได ้ = 2N -2 = 26-2 = 64-2 = 62 
+
+่ใช ้ได ้ = 2H -2 = 22 -2 = 4-2 = 2 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4. การหา  
+
+4.1 Subnetwork  Address / Subnetwork IP / Subnet  
+
+Address / Network Address / Network IP  
+่มต ้น ของ Subnet 
+คือ IP ค่าแรก/เริ
+
+4.2 Broadcast Address / Broadcast IP  
+
+คือ IP ตัวสุดท ้าย ของ Subnet 
+
+ต ัวอย่าง IP Address 161.211.51.66 ที
+จะมี Subnetwork Address เป็ นค่าใด 
+
+่มีค่า Subnet Mask 255. 255.0.0 
+
+Subnet Mask 
+IP Address 
+Subnetwork  Address 
+Broadcast Address 
+
+255 
+161 
+161 
+161 
+
+. 
+. 
+. 
+. 
+
+255 
+211 
+211 
+211 
+
+. 
+. 
+. 
+. 
+
+0 
+51 
+0 
+255 
+
+. 
+. 
+. 
+. 
+
+0 
+66 
+0 
+255 
+
+Subnetwork  Address = 161.211.0.0 
+Broadcast  Address   = 161.211.255.255 
+
+ต ัวอย่าง  IP Address 45.123.21.8 ที
+มี Network Address และ Broadcast Address เป็ นค่าใด 
+
+่มีค่า Subnet Mask 255.192.0.0 จะ
+
+Subnet Mask 
+
+IP Address 
+
+255 
+
+45 
+
+192 
+
+. 
+  11000000 
+. 
+123 
+  011111001 
+↓ 
+
+IP Address เริ
+่มต ้น  
+Network Address/IP   
+Subnet Address/IP 
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+45 
+
+45 
+
+64 
+
+  01000000 
+. 
+  01111111 
+. 
+
+127 
+
+. 
+
+. 
+
+. 
+
+. 
+
+0 
+
+21 
+
+0 
+
+255 
+
+. 
+
+. 
+
+. 
+
+. 
+
+0 
+
+8 
+
+0 
+
+255 
+
+Network  Address  
+Broadcast  Address   = 45.127.255.255 
+
+= 45.64.0.0 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ต ัวอย่าง  IP Address 213.27.47.37 ที
+255.255.255.240 จะมี Network Address และ Broadcast Address 
+เป็ นค่าใด 
+
+่มีค่า Subnet Mask 
+
+Subnet Mask 
+
+255 
+
+. 
+
+255 
+
+IP Address 
+
+213 
+
+. 
+
+27 
+
+IP Address เริ
+่มต ้น  
+Network Address/IP   
+Subnet Address/IP 
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+213 
+
+. 
+
+27 
+
+213 
+
+. 
+
+27 
+
+Network  Address  
+= 213.27.47.32 
+Broadcast  Address   = 213.27.47.47 
+
+. 
+
+. 
+
+. 
+
+. 
+
+255 
+
+47 
+
+47 
+
+47 
+
+240 
+
+. 
+  11110000 
+37 
+. 
+  00100101 
+↓ 
+  00100000 
+32 
+. 
+  00101111 
+. 
+
+47 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5. การคํานวณ IP Address 
+
+ต ัวอย่าง จากหมายเลข IP 194.17.10.0/27 จงหา 
+1. จํานวน Subnet  
+= 2N = 23 = 8  
+
+2. จํานวน Host ในแต่ละ Subnet (host/subnet)  
+
+= 2H = 25 = 32 
+
+3. หาหมายเลข Subnet Mask    
+/27 = 255.255.255.224 
+
+Subnet Mask 
+/27 
+
+IP Address 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+11111111    11111111    11111111    11100000 
+
+255 
+194 
+
+194 
+
+194 
+
+. 
+. 
+
+. 
+
+. 
+
+255 
+17 
+
+17 
+
+17 
+
+. 
+. 
+
+. 
+
+. 
+
+255 
+10 
+
+10 
+
+10 
+
+N,H 
+224 
+. 
+. 
+0 
+  00000000 
+↓ 
+  00000000 
+. 
+0 
+  00011111 
+31 
+. 
+
+4. ในแต่ละ Subnet จงหา 
+
+4.1 Network Address หรือ Network IP หรือ Subnet Address 
+4.2 Broadcast Address หรือ Broadcast IP 
+
+Subnet 0  194.17.10.0 
+Subnet 1  194.17.10.32 
+Subnet 2  194.17.10.64 
+Subnet 3  194.17.10.96 
+Subnet 4  194.17.10.128 
+Subnet 5  194.17.10.160 
+Subnet 6  194.17.10.192 
+Subnet 7  194.17.10.244 
+
+-  194.17.10.31 
+-  194.17.10.63 
+-  194.17.10.95 
+-  194.17.10.127 
+-  194.17.10.159 
+-  194.17.10.191 
+-  194.17.10.243 
+-  194.17.10.255 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4.3 ช่วงหมายเลข IP ที
+
+่ใช ้งานได ้ 
+Subnet 0  194.17.10.1 
+Subnet 1  194.17.10.33 
+Subnet 2  194.17.10.65 
+Subnet 3  194.17.10.97 
+Subnet 4  194.17.10.129 
+Subnet 5  194.17.10.161 
+Subnet 6  194.17.10.193 
+Subnet 7  194.17.10.245 
+
+-  194.17.10.30 
+-  194.17.10.62 
+-  194.17.10.94 
+-  194.17.10.126 
+-  194.17.10.158 
+-  194.17.10.190 
+-  194.17.10.242 
+-  194.17.10.254 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ต ัวอย่าง 192.168.22.50/30 
+จงหา 
+1. Subnet Mask คือ ค่าเท่าไร   
+
+/30 = 255.255.255.252 
+
+Subnet Mask 
+/30 
+
+IP Address 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+11111111    11111111    11111111    11111100 
+
+255 
+192 
+
+192 
+
+192 
+
+. 
+. 
+
+. 
+
+. 
+
+255 
+168 
+
+168 
+
+168 
+
+. 
+. 
+
+. 
+
+. 
+
+255 
+22 
+
+22 
+
+22 
+
+N,H 
+252 
+. 
+. 
+50 
+  00110010 
+↓ 
+  00110000 
+. 
+48 
+  00110011 
+51 
+. 
+
+2. จํานวน IP ต่อ Subnet  มีได ้กี
+
+่ค่า 
+
+= 2H = 22 = 4  
+
+6. จํานวน hosts Per Subnet มีค่าเท่าไร 
+
+= 2H = 22 = 4  
+
+7. นํามา set เป็ น host ได ้ กี
+=2H-2 =22-2 =4 
+
+่ IP 
+
+3. Network IP คือ ค่าเท่าไร 
+4. Broadcast IP คือ ค่าเท่าไร 
+= 192.168.22.48 
+Network  Address  
+Broadcast  Address   = 192.168.22.51 
+
+5. Range hosts IP ที
+
+่สามารถนําไปใช ้งานได ้ 
+
+192.168.22.49 – 192.168.22.50 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ต ัวอย่าง IP 10.10.10.0/13  เป็ น IP ที
+
+่นําไป set ให ้ host ได ้หรือไม่ 
+
+Subnet Mask 
+/13 
+
+11111111    11111000    0000000    0000000 
+
+IP Address 
+
+10 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+192 
+
+192 
+
+N,H 
+
+. 
+. 
+10 
+  00001010   
+          ↓ 
+
+10 
+
+. 
+
+0 
+
+8 
+
+  00001000    0000000    0000000 
+. 
+0 
+  00001111    11111111    11111111 
+255 
+. 
+
+255 
+
+15 
+
+0 
+
+. 
+
+. 
+
+. 
+
+. 
+
+= 10.8.0.0 
+
+Network  Address  
+Broadcast  Address   = 10.15.225.255 
+Range hosts IP ที
+IP 10.10.10.0 นําไป set ให ้host ได ้หรือไม่   ตอบ ได ้ 
+
+่ใช ้ได ้ → 10.8.0.1 -  10.15.255.254 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ต ัวอย่าง  
+
+IPv4 Address/Prefix 
+
+192.168.100.57/28 
+
+วิธีทํา 
+
+Network  
+Address 
+
+Broadcast 
+Address 
+
+Total Number 
+of Host Bits 
+(H bit) 
+
+Total Number 
+่ใช ้ได ้ 
+of Hosts ที
+(2H-2) 
+
+Subnet Mask 
+/28 
+IP Address 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+ตอบ 
+
+IPv4 Address/Prefix 
+
+11111111    11111111    11111111    11110000 
+
+192 
+
+192 
+
+192 
+
+192 
+
+. 
+
+. 
+
+. 
+
+. 
+
+168. 
+
+168. 
+
+168. 
+
+168. 
+
+. 
+
+. 
+
+. 
+
+. 
+
+100 
+
+100 
+
+100 
+
+100 
+
+N,H 
+57 
+  00111001 
+. 
+      ↓ 
+  00110000 
+. 
+48 
+  00111111 
+63 
+. 
+
+Network  
+Address 
+
+Broadcast 
+Address 
+
+Total Number 
+of Host Bits 
+(H bit) 
+
+Total Number 
+่ใช ้ได ้ 
+of Hosts ที
+(2H-2) 
+
+192.168.100.57/28  192.168.100.48  192.168.100.63 
+
+4 
+
+24-2 = 14 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ต ัวอย่าง  
+
+Host IP Address: 
+Original Subnet Mask 
+New Subnet Mask: 
+
+Given: 
+
+Find: 
+
+172.16.77.120 
+255.255.0.0 
+255.255.240.0 
+
+2.1.1  Number of Subnet Bits (N) 
+2.1.2  Number of Subnets Created (2N) 
+
+n=4 
+2N=24=16 
+
+2.1.3  Number of Host Bits per Subnet (H bits) 
+
+2.1.4  Number of Hosts per Subnet ที
+
+่ใช ้ได ้  
+
+(2H-2) 
+
+h=12 
+2H-2=212-2=4,094 
+
+2.1.5  Network Address of this Subnet 
+
+172.16.64.0 
+
+2.1.6 
+
+IPv4 Address of First Host on this Subnet  172.16.64.1 
+
+2.1.7 
+
+IPv4 Address of Last Host on this Subnet  172.16.79.254 
+
+2.1.8 
+
+IPv4 Broadcast Address on this Subnet 
+
+172.16.79.255 
+
+Subnet Mask 
+
+255 
+
+. 
+
+255 
+
+. 
+
+224 
+
+. 
+
+0 
+N,H 
+
+11111111    11111111    11100000    00000000 
+
+IP Address 
+
+172 
+
+. 
+
+16 
+
+. 
+77 
+. 
+  01001101   
+    ↓ 
+
+120 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+172 
+
+172 
+
+. 
+
+. 
+
+16 
+
+.  01000000  .  00000000 
+
+16 
+
+64 
+.  01011111 
+79 
+
+0 
+  11111111 
+255 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Assignment 8.2 
+1. จงคํานวณ และเติมค่าลงในตาราง 
+
+รวม 40 คะแนน 
+
+IPv4 Address/Prefix 
+
+Network  
+Address 
+
+Broadcast 
+Address 
+
+Total Number
+of Host Bits 
+(H bit) 
+
+1.1  192.168.100.25/28  192.168.100.16  192.168.100.31 
+
+1.2  172.30.10.130/30 
+
+172.30.10.128  172.30.10.131 
+
+1.3  10.1.113.75/19 
+
+10.1.96.0 
+
+10.1.127.255 
+
+1.4  198.133.219.250/24  198.133.219.0  198.133.219.255 
+
+1.5  128.107.14.191/22  128.107.12.0 
+
+128.107.15.255 
+
+1.6  172.16.104.99/27 
+
+172.16.104.96  172.16.104.127 
+
+4 
+
+2 
+
+13 
+
+8 
+
+10 
+
+5 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.1) 192.168.100.25/28   
+วิธีทํา 
+
+4 คะแนน 
+
+Subnet Mask 
+/28 
+IP Address 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+ตอบ 
+
+IPv4 Address/Prefix 
+
+11111111  .  11111111  .  11111111  .  11110000 
+
+192 
+
+. 
+
+168 
+
+. 
+
+100 
+
+192 
+
+192 
+
+. 
+
+. 
+
+168 
+
+168 
+
+. 
+
+. 
+
+100 
+
+100 
+
+N,H 
+25 
+. 
+  00011001 
+        ↓ 
+  00010000 
+16 
+. 
+  00011111 
+31 
+. 
+
+Network  
+Address 
+
+Broadcast 
+Address 
+
+Total Number 
+of Host Bits 
+(H bit) 
+
+Total Number 
+่ใช ้ได ้ 
+of Hosts ที
+(2H-2) 
+
+192.168.100.25/28  192.168.100.16  192.168.100.31 
+
+4 
+
+24-2 = 14 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.2) 172.30.10.130/30 
+
+4 คะแนน 
+
+วิธีทํา 
+
+Subnet Mask 
+/30 
+
+IP Address 
+
+11111111  .  11111111  .  11111111  .  11111100 
+
+172 
+
+. 
+
+30 
+
+. 
+
+10 
+
+N,H 
+. 
+130 
+  10000010 
+            ↓ 
+  10000000 
+. 
+128 
+  10000011 
+131 
+. 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+172 
+
+172 
+
+. 
+
+. 
+
+30 
+
+30 
+
+. 
+
+. 
+
+10 
+
+10 
+
+ตอบ 
+
+IPv4 Address/Prefix 
+
+Network  
+Address 
+
+Broadcast 
+Address 
+
+Total Number 
+of Host Bits 
+(H bit) 
+
+Total Number 
+่ใช ้ได ้ 
+of Hosts ที
+(2H-2) 
+
+172.30.10.130/30 
+
+172.30.10.128 
+
+172.30.10.131 
+
+2 
+
+22-2 = 2 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.3) 10.1.113.75/19   
+วิธีทํา 
+
+4 คะแนน 
+
+Subnet Mask 
+/19 
+IP Address 
+
+11111111  .  11111111  .  11100000  .  00000000 
+
+10 
+
+. 
+
+1 
+
+N,H 
+. 
+113 
+. 
+  01110001   
+     ↓ 
+
+75 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+10 
+
+10 
+
+. 
+
+. 
+
+1 
+
+1 
+
+96 
+
+  01100000    00000000 
+. 
+. 
+  01111111    11111111 
+. 
+. 
+
+127 
+
+255 
+
+0 
+
+ตอบ 
+
+IPv4 Address/Prefix 
+
+Network  
+Address 
+
+Broadcast 
+Address 
+
+Total Number 
+of Host Bits 
+(H bit) 
+
+Total Number 
+่ใช ้ได ้ 
+of Hosts ที
+(2H-2) 
+
+10.1.113.75/19 
+
+10.1.96.0 
+
+10.1.127.255 
+
+13 
+
+213-2 = 
+8,190 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.4) 198.133.219.250/24 
+วิธีทํา 
+
+4 คะแนน 
+
+Subnet Mask 
+/24 
+IP Address 
+
+11111111  .  11111111    11111111  .  00000000 
+
+198 
+
+. 
+
+133 
+
+. 
+
+219 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+198 
+
+198 
+
+. 
+
+. 
+
+133 
+
+133 
+
+. 
+
+. 
+
+219 
+
+219 
+
+ตอบ 
+
+IPv4 Address/Prefix 
+
+Network  
+Address 
+
+Broadcast 
+Address 
+
+Total Number 
+of Host Bits 
+(H bit) 
+
+Total Number 
+่ใช ้ได ้ 
+of Hosts ที
+(2H-2) 
+
+198.133.219.250/24  198.133.219.0  198.133.219.255 
+
+8 
+
+28-2 = 254 
+
+N,H 
+250 
+. 
+  11111010 
+↓ 
+  00000000 
+0 
+. 
+  11111111 
+. 
+
+255 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.5) 128.107.14.191/22   
+วิธีทํา 
+
+4 คะแนน 
+
+Subnet Mask  
+/22 
+
+IP Address 
+
+11111111  .  11111111  .  11111100  .  00000000 
+
+128 
+
+. 
+
+107 
+
+N,H 
+. 
+14 
+. 
+  00001110   
+           ↓ 
+
+191 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+128 
+
+128 
+
+. 
+
+. 
+
+107 
+
+107 
+
+12 
+
+  00001100    00000000 
+. 
+. 
+  00001111    11111111 
+. 
+
+255 
+
+15 
+
+0 
+
+. 
+
+ตอบ 
+
+IPv4 Address/Prefix 
+
+Network  
+Address 
+
+Broadcast 
+Address 
+
+Total Number 
+of Host Bits 
+(H bit) 
+
+Total Number 
+่ใช ้ได ้ 
+of Hosts ที
+(2H-2) 
+
+128.107.14.191/22  128.107.12.0 
+
+128.107.15.255 
+
+10 
+
+210-2 = 
+1,022 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.6) 172.16.104.99/27 
+
+4 คะแนน 
+
+วิธีทํา 
+
+Subnet Mask  
+/27 
+
+IP Address 
+
+11111111  .  11111111  .  11111111  .  11100000 
+
+172 
+
+. 
+
+16 
+
+. 
+
+104 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+172 
+
+172 
+
+. 
+
+. 
+
+16 
+
+16 
+
+. 
+
+. 
+
+104 
+
+104 
+
+ตอบ 
+
+IPv4 Address/Prefix 
+
+Network  
+Address 
+
+Broadcast 
+Address 
+
+Total Number 
+of Host Bits 
+(H bit) 
+
+Total Number 
+่ใช ้ได ้ 
+of Hosts ที
+(2H-2) 
+
+172.16.104.99/27 
+
+172.16.104.96 
+
+172.16.104.127 
+
+5 
+
+25-2 = 30 
+
+N,H 
+. 
+99 
+  01100011 
+↓ 
+  01100000 
+. 
+96 
+  01111111 
+127 
+. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2. จงคํานวณ และเติมค่าลงในตาราง 
+
+2.1 
+
+Host IP Address: 
+
+Original Subnet Mask 
+
+New Subnet Mask: 
+
+Given: 
+
+Find: 
+
+8 คะแนน 
+
+172.22.32.12 
+
+255.255.0.0 
+
+255.255.224.0 
+
+2.1.1  Number of Subnet Bits (N) 
+2.1.2  Number of Subnets Created (2N) 
+
+N = 3 
+2N = 23 = 8 
+
+2.1.3  Number of Host Bits per Subnet (H bits)  H=13 
+
+2.1.4  Number of Hosts per Subnet ที
+
+่ใช ้ได ้  (2H-2)  2H-2 = 213-2 = 8,190 
+
+2.1.5  Network Address of this Subnet 
+
+172.22.32.0 
+
+2.1.6 
+
+IPv4 Address of First Host on this Subnet  172.22.32.1 
+
+2.1.7 
+
+IPv4 Address of Last Host on this Subnet  172.22.63.254 
+
+2.1.8 
+
+IPv4 Broadcast Address on this Subnet 
+
+172.22.63.255 
+
+วิธีทํา 
+
+Subnet Mask 
+
+255 
+
+. 
+
+255 
+
+. 
+
+224 
+
+. 
+
+0 
+
+11111111    11111111    11100000    00000000 
+
+IP Address 
+
+172 
+
+. 
+
+22 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+172 
+
+172 
+
+. 
+
+. 
+
+22 
+
+22 
+
+. 
+32 
+  00100000   
+      ↓ 
+
+12 
+
+  00100000    00000000 
+. 
+. 
+0 
+32 
+  11111111 
+  00111111 
+255 
+. 
+63 
+. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2.2 
+
+Host IP Address: 
+
+Original Subnet Mask 
+
+New Subnet Mask: 
+
+Given: 
+
+Find: 
+
+8 คะแนน 
+
+192.168.1.245 
+
+255.255.255.0 
+
+255.255.255.252 
+
+2.1.1  Number of Subnet Bits (N) 
+2.1.2  Number of Subnets Created (2N) 
+
+N = 6 
+2N = 26 = 64 
+
+2.1.3  Number of Host Bits per Subnet (H bits)  H=2 
+
+2.1.4  Number of Hosts per Subnet ที
+
+่ใช ้ได ้  (2H-2)  2H-2 = 22-2 = 2 
+
+2.1.5  Network Address of this Subnet 
+
+192.168.1.244 
+IPv4 Address of First Host on this Subnet  192.168.1.245 
+IPv4 Address of Last Host on this Subnet  192.168.1.246 
+192.168.1.247 
+IPv4 Broadcast Address on this Subnet 
+
+2.1.6 
+
+2.1.7 
+
+2.1.8 
+
+วิธีทํา 
+
+Subnet Mask 
+
+255 
+
+255 
+11111111    11111111    11111111 
+
+255 
+
+. 
+
+. 
+
+IP Address 
+
+192 
+
+. 
+
+168 
+
+. 
+
+1 
+
+IP Address เริ
+Network Address/IP   
+Subnet Address/IP 
+
+่มต ้น  
+
+IP Address สุดท ้าย   
+Broadcast Address/IP  
+
+192 
+
+192. 
+
+. 
+
+. 
+
+168 
+
+168 
+
+. 
+
+. 
+
+1 
+
+1 
+
+. 
+252 
+  11111100 
+N,H 
+245 
+. 
+  11110101 
+           ↓ 
+
+  11110100 
+244 
+. 
+  11110111 
+247 
+. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
